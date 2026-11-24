@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ post.title }} — Гостиница</title>
+    <link rel="stylesheet" href="{% static 'css/room.css' %}">
+</head>
+<body class="article">
+    <div class="header">
+        <img src="{% static 'img/logo.png' %}" alt="Логотип гостиницы">
+    </div>
+
+    <div class="article-content">
+        <h1>{{ post.title }}</h1>
+
+        <div class="article-meta">
+            <div class="article-author">
+                Автор: {{ post.author.username|default:"неизвестен" }}
+            </div>
+            <div class="article-created-date">
+                {{ post.created_date|date:"d.m.Y H:i" }}
+            </div>
+        </div>
+
+        <p class="article-text">{{ post.text }}</p>
+
+        <p class="article-back">
+            <a href="{% url 'archive' %}">← Все записи</a>
+        </p>
+    </div>
+</body>
+</html>

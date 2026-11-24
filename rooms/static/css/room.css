@@ -1,0 +1,127 @@
+/* Общие стили страницы */
+body {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Логотип по центру */
+.header img {
+    display: block;
+    width: 318px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+/* Контент по центру, ширина 960px */
+.archive,
+.article-content {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ссылки в заголовках — белые (по умолчанию синие) */
+.post-title a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.post-title a:hover {
+    text-decoration: underline;
+}
+
+/* Автор и дата на одной строке */
+.article-author {
+    width: 50%;
+    float: left;
+}
+
+.article-created-date {
+    text-align: right;
+}
+
+/* Обёртка для «автор + дата» — чтобы float не «вылезал» */
+.article-meta {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+/* Текст статьи */
+.article-text {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Ссылка «Все записи» */
+.article-back a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Стили только для страницы одного номера */
+.article h1 {
+    font-size: 32px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/* Стили только для страницы списка */
+.archive .one-post {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 20px 0;
+}
+.create-form {
+    margin-top: 20px;
+}
+
+.create-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.create-form input[type="text"],
+.create-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 15px;
+    border: none;
+    border-radius: 4px;
+    color: #222;
+}
+
+.create-form textarea {
+    height: 180px;
+    resize: vertical;
+}
+
+.create-form input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: #ffffff;
+    color: #1abc9c;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.create-form input[type="submit"]:hover {
+    background: #e8f8f5;
+}
+
+.form-error {
+    margin-top: 15px;
+    padding: 10px;
+    background: rgba(255, 0, 0, 0.25);
+    border-left: 4px solid #ff5555;
+    border-radius: 4px;
+}
